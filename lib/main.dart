@@ -105,8 +105,7 @@ class _MainPageState extends State<MainPage> {
                   end: Alignment.bottomRight,
                   colors: [Color(0xFFf4f6f8), Color(0xFFdae6f9)])),
           child: SingleChildScrollView(
-            padding: const EdgeInsets.only(
-                left: 10, top: 10, right: 0, bottom: 80.0),
+            padding: const EdgeInsets.all(10.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
