@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.yellow,
+        primarySwatch: Colors.grey,
       ),
       home: const MainPage(),
     );
@@ -50,7 +50,11 @@ class _MainPageState extends State<MainPage> {
     setState(() {
       if (!status1) {
         temperature = 0;
-      } else {
+      }
+      else if (temperature >= 32) {
+        temperature = 32;
+      }
+      else {
         temperature++;
       }
     });
@@ -70,7 +74,12 @@ class _MainPageState extends State<MainPage> {
 
   void fanincrement() {
     setState(() {
-      fan++;
+       if (fan >= 75) {
+      fan = 75;
+      }
+       else {
+         fan++;
+       }
     });
   }
 
